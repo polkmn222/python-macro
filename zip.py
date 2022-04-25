@@ -10,7 +10,7 @@ while True:
     zfile = zipfile.ZipFile('text.zip', 'r')
     paw = ''
 
-    for i in range(8,13):
+    for i in range(0,2):
         paw += random.choice(set)
 
     if zfile:

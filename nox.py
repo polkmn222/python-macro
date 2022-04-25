@@ -45,13 +45,7 @@ while 1:
     pyautogui.doubleClick(x=650,y=450)
     time.sleep(0.1)
 """
-import pyautogui
-import keyboard
-import time
-import random
 
-# pip install pyautogui
-# pip install keyboard
 """
 while 1:
     pyautogui.press('f5', interval=3)
@@ -68,12 +62,43 @@ if keyboard.is_pressed('enter'):
     print(position)
     time.sleep(0.2)
 """
+"""
+pyautogui.click(x=50,y=500, interval=1)
+pyautogui.click(x=60,y=950, interval=1)
+
+"""
+"""
 while True:
-    set = 'qwertyuiopasdfghjklzxcvbnm1234567890A'
+    set = 'qwertyuiopasdfghjklzxcvbnm1234567890A.!'
     paw = ''
-    pyautogui.doubleClick(x=40,y=365, interval=0.1)
-    for i in range(1,5):
+    pyautogui.doubleClick(x=50,y=500, interval=0.1)
+    for i in range(1,6):
+        if i==2: continue
         paw += random.choice(set)
         pyautogui.typewrite(paw, interval=0.001)
        
-    pyautogui.click(x=100,y=660, interval=1)
+    pyautogui.click(x=60,y=950, interval=1)
+"""
+import pyautogui
+import keyboard
+import time
+import random
+
+# pip install pyautogui
+# pip install keyboard
+while True:
+    set = 'qwertyuiopasdfghjklzxcvbnm1234567890.'
+    set1 = '!'
+    paw = ''
+    pyautogui.doubleClick(x=50,y=500, interval=0.1)
+    paw += 'A'
+    for i in range(11):
+        paw += random.choice(set)
+    
+    paw += '!'
+    print(paw)
+    
+    pyautogui.typewrite(paw, interval=0.001)
+    pyautogui.click(x=60,y=950, interval=1)
+    if keyboard.is_pressed('F6'):
+        break
