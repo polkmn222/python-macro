@@ -4,15 +4,20 @@ import time
 
 start_time = time.time()
 number = int(input("패스워드의 자릿수 :"))
-
+list1 = []
 while True:
     set = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.!'
     zfile = zipfile.ZipFile('text.zip', 'r')
     paw = ''
 
+    for i in range(len(list1)):
+        if list1[i] == paw:
+            print("overlap")
+    
     for i in range(0,2):
         paw += random.choice(set)
-
+    list1.append(paw)
+    
     if zfile:
         try:
             zfile.extractall(path='.', pwd=str(paw).encode('utf-8'))
