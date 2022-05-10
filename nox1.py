@@ -3,8 +3,8 @@ import keyboard
 import time
 import random
 
-set = 'qwertyuiopasdfghjklzxcvbnm1234567890'
-set1 = 'AQ'
+set = 'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM'
+set1 = 'QWERTYUIOPASDFGHJKLZXCVBNM'
 set2 = '.!'
 paw = []
 
